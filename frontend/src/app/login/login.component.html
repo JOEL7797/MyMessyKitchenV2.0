@@ -1,0 +1,19 @@
+<div class="container " style="text-align: center;">
+    <form action="#" style="text-align: center;">
+        <div class="row">
+            <h2 style="text-align:center;color: aliceblue;">LOGIN USER</h2>
+
+
+
+            <div class="col" style="text-align: center;">
+                <div class="bor" style="border:1px solid;  text-align: center; padding: 30%;">
+                    <h1 style="color: aliceblue;">LOGIN</h1>
+                    <input type="text" name="username" style="text-align: center;" placeholder="Email" [(ngModel)]="logindata.email" required>
+                    <input type="password" name="password" style="text-align: center;" placeholder="Password" [(ngModel)]="logindata.pass" required>
+                    <input type="submit" (click)="login()" value="Login">
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

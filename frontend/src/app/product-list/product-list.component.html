@@ -1,0 +1,46 @@
+<div class='card'>
+    <div class='card-header ki'>
+        {{pageTitle}}
+        <button class="btn btn-info" style="margin-left: 85%;position: relative;top:77px;" routerLink="/products">Home</button>
+        <button class="btn btn-info" (click)="logout()" style="margin-left: 78%;position: relative;top:37px;">LOGOUT</button>
+        <button class="btn btn-success" style="margin-left: 45%;" routerLink="/addproducts">Add Product</button>
+    </div>
+
+    <div class='card-body'>
+        <div class='table-responsive'>
+            <table class='table bg-pic' *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Product Type</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>location</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td><img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.height.px]='imageHeight' [style.margin.px]='imageMargin'></td>
+                        <td style="position: relative;top:37px;">{{product.productId}}</td>
+                        <td style="position: relative;top:37px;">{{ product.productName|uppercase }}</td>
+                        <td style="position: relative;top:37px;">{{ product.productType }}</td>
+                        <td style="position: relative;top:37px;">{{ product.price|currency:'USD' }}</td>
+                        <td style="position: relative;top:37px;">{{ product.quantity }}</td>
+                        <td style="position: relative;top:37px;">{{ product.location }}</td>
+                        <td>
+                            <button class="btn btn-warning" style="cursor:pointer;" (click)="editProduct(product)" style="margin-left: 20px; width: 100px;position:relative; margin-top: 24px;"> Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" style="cursor:pointer;" (click)="deleteProduct(product)" style="width: 100px; margin-top: 24px;"> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

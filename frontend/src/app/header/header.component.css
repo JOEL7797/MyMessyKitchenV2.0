@@ -1,0 +1,52 @@
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 100px;
+    margin-top: 5px;
+
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 39.85%;
+    top: 25px;
+    color: blue;
+}
+.dropbtn {
+    background-color:white;
+    color: blue;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    width:80px;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;
+    color:white;
+}
